@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Codingame-editor-sync",
+  "version": "1.0",
+
+  "description": "Merge all your code from your local dev environment in 1 file and copy it automatically into the codingame editor",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+		  "https://www.codingame.com/ide/puzzle/*",
+		  "https://www.codingame.com/ide/challenge/*"
+	  ],
+      "js": ["utils.js", "sync.js"]
+    }
+  ],
+  "permissions": [
+	  "<all_urls>",
+	  "tabs",
+	  "activeTab"
+  ]
+}
+
+

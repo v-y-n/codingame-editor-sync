@@ -1,0 +1,1 @@
+# codingame-editor-sync
